@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Mars Information Listings -->
+    <div class="row">
+      <div class="col-md-12">
+      <h3><b>Latest Mars News</b></h3>
+      <!-- Add News Title and information-->
+      <h5><b>{{listings.news_title}}</b></h5>  
+      {{listings.news_p}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h3><b>Featured Mars Image</b></h3>  
+        <!-- Add Featured Mars Image-->
+        <img src={{listings.featured_image_url}} style = "width:100%;height:100%">
+      </div>
+      <div class="col-md-4">
+        <div class="weather-details" style = "border: 1px solid grey; padding: 10px">
+          <p><b>Current Weather on Mars</b></p>
+          <!-- Add Current Weather-->
+          {{listings.mars_weather}}
+        </div>
+        <div class="" style = "margin-top: 10px">
+          <p><b>Mars Facts</b></p>
+          <!-- Add Mars Facts-->
+          <pre><code>
+          <p>{{listings.facts_html}}</p>
+          </code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h4 style="text-align: center;"><b>Mars Hemispheres</b><h4>
+      <div class="col-md-12">
+      <!-- Add News Title and information-->  
+      </div>
+    </div>
+
+    <div class="row" style = "margin-bottom: 10px">
+      <div class="col-md-6">
+      <!-- Add News Title and information-->  
+        <div style = "border: 1px solid lightgrey">
+          <img src={{listings.hemi_data[0].img_url}} alt="Card image cap" style = "width:100%;height:100%;padding:5px">
+          <div>
+            <h5 style = "margin-left: 10px"><b>{{listings.hemi_data[0].title}}</b></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+      <!-- Add News Title and information-->  
+      <div style = "border: 1px solid lightgrey">
+          <img src={{listings.hemi_data[1].img_url}} alt="Card image cap" style = "width:100%;height:100%;padding:5px">
+          <div>
+            <h5 style = "margin-left: 10px"><b>{{listings.hemi_data[1].title}}</b></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+      <!-- Add News Title and information-->  
+      <div style = "border: 1px solid lightgrey">
+          <img src={{listings.hemi_data[2].img_url}} alt="Card image cap" style = "width:100%;height:100%;padding:5px">
+          <div>
+            <h5 style = "margin-left: 10px"><b>{{listings.hemi_data[2].title}}</b></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+      <!-- Add News Title and information-->  
+      <div style = "border: 1px solid lightgrey">
+          <img src={{listings.hemi_data[3].img_url}} alt="Card image cap" style = "width:100%;height:100%;padding:5px">
+          <div >
+            <h5 style = "margin-left: 10px"><b>{{listings.hemi_data[3].title}}</b></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
