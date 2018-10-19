@@ -58,7 +58,7 @@ def scrape():
     df = tables[0]
     df.columns = ['description','value']
     # Converting the df to html
-    listings["facts_html"] = pd.DataFrame.to_html(df)
+    listings["facts_html"] = pd.DataFrame.to_html(df, classes="table")
 
     # Get images of Mars Hemispheres
     hemi_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
